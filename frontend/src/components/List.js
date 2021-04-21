@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 const List = (props) => {
     return (
-        <div style={{height:"400px",width:"1262px",backgroundColor:"#ffb3b3"}}>
+        <div style={{height:"400px",width:"1000px",backgroundColor:"#ffb3b3"}}>
 
 <Grid container id="grid-container" style={{gridGap:"50px",padding:"50px",fontSize:"20px"}}>
     {props.descri.map((descri,title, index)=>(
