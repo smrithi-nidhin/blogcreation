@@ -29,7 +29,16 @@ class Login extends Component {
             email: this.state.email,
             password: this.state.password,
         }
-        this.props.loginUser(user);
+        alert(user.email)
+        if(user.email=="admin@gmail.com"){
+            this.props.loginUser(user);
+        }
+        else{
+            this.props.history.push('/userpage')
+        
+        }
+        //this.props.loginUser(user);
+      
     }
 
     componentDidMount() {
