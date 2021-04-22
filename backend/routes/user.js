@@ -9,7 +9,7 @@ const validateRegisterInput = require('../validation/register');
 const validateLoginInput = require('../validation/login');
 
 const User = require('../models/User');
-
+const Blog = require('../models/Blog');
 router.post('/register', function(req, res) {
 
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -110,5 +110,17 @@ router.get('/me', passport.authenticate('jwt', { session: false }), (req, res) =
         email: req.user.email
     });
 });
+router.post('/addblog', function(req, res) {
+  
+  let title = req.body.title;
+  let descri = req.body.descri;
+
+  {
+    book.addblog(title,descri)
+      .then(data=>{
+        res.status(data.statusCode).send({message: data.message});
+      })
+     }
+ })
 
 module.exports = router;

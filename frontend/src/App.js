@@ -58,7 +58,7 @@ class App extends Component {
               </Modal> */}
             {/* <Modal /> */}
               <Navbar />
-                <Route exact path="/" component={ Add} />
+                <Route exact path="/" component={ Home} />
                 
                 
                 <div className="container">

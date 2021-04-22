@@ -9,7 +9,7 @@ const List = (props) => {
 <Grid container id="grid-container" style={{gridGap:"50px",padding:"50px",fontSize:"20px"}}>
     {props.descri.map((descri,title, index)=>(
         <Grid style={{backgroundColor:"white",width:"200px",padding:"10px"}} item xl={3} key={index}>
-            Title {title}<br />
+           Blog Title {title}<br />
             {descri.message}{" "} 
             
         </Grid>
